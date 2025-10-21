@@ -1,6 +1,7 @@
 {
   "name": "multiai-backend",
   "version": "1.0.0",
+  "type": "module",
   "description": "Simple backend for MultiAI",
   "main": "server.js",
   "scripts": {
