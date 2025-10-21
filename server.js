@@ -11,7 +11,14 @@ const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:5500',
+    'http://127.0.0.1:5500',
+    'https://xwalfie-smr.github.io',
+  ]
+}))
 
 // Health check
 app.get('/healthz', (req, res) => res.send('OK'));
